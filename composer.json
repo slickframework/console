@@ -1,0 +1,44 @@
+{
+  "name": "slick/console",
+  "description": "Console utility for slick framework",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "version": "v1.2.0",
+  "keywords": [
+    "slick",
+    "console",
+    "slick console"
+  ],
+  "authors": [
+    {
+      "name": "Filipe Silva",
+      "email": "silvam.filipe@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Slick\\Console\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Slick\\Tests\\Console\\": "tests"
+    }
+  },
+  "require": {
+    "symfony/console": "^3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4",
+    "phpunit/php-code-coverage": "^2",
+    "scrutinizer/ocular": "^1.1",
+    "behat/behat": "^3.0.4"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.2-dev",
+      "dev-develop": "1.3-dev"
+    }
+  }
+}
