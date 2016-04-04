@@ -1,0 +1,22 @@
+#!/usr/bin/env php
+<?php
+
+
+define('SLICK_BIN_PATH', __FILE__);
+
+$psr4Data = [];
+if (is_file($autoload = getcwd() . '/vendor/autoload.php')) {
+    require $autoload;
+    $psr4Data = include getcwd() . '/vendor/composer/autoload_psr4.php';
+}
+
+
+use Symfony\Component\Console\Application;
+use Slick\Console\CommandFactory;
+
+$application = new Application("Slick Console", "v1.2.0");
+
+$commandFactory = new CommandFactory($application, $psr4Data);
+$commandFactory->loadCommands();
+
+$application->run();
